@@ -1,0 +1,28 @@
+{
+  "name": "airplane",
+  "version": "1.0.0",
+  "description": "Extreme Sport Aviation is a school in Canada that will teach you how to fly ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesMedina7787/extremeSportAviation.git"
+  },
+  "keywords": [
+    "airplane",
+    "flight",
+    "aviation",
+    "school",
+    "canada",
+    "learn",
+    "fly"
+  ],
+  "author": "James W Medina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamesMedina7787/extremeSportAviation/issues"
+  },
+  "homepage": "https://github.com/JamesMedina7787/extremeSportAviation#readme"
+}
