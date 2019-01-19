@@ -1,0 +1,45 @@
+<link href="./partials/menu.css" rel='stylesheet'>
+
+<div id="menuCollapsed">
+<div id="shrunkMenu">MENU</div>
+</div>
+<div style="display:flex;text-align:center;flex-direction:row">
+<nav class="mainMenu" >
+
+
+    <ul class="mainMenu">
+      <li><a href="">Home</a></li>
+      <li><a href="">Intro To Flight</a></li>
+      <li><a href="">Flight Training</a></li>
+      <li><a href="page6">Locations</a></li>
+      <li><a href="">Our Aircraft</a></li>
+      <li><a href="">About Us</a></li>
+    </ul>
+
+</nav>
+</div>
+
+<nav class="smallMainMenu" id="closed">
+
+
+    <ul class="smallMainMenu">
+      <li><a href="">Home</a></li>
+      <li><a href="">Intro To Flight</a></li>
+      <li><a href="">Flight Training</a></li>
+      <li><a href="page6">Locations</a></li>
+      <li><a href="">Our Aircraft</a></li>
+      <li><a href="">About Us</a></li>
+    </ul>
+
+</nav>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+    $('#menuCollapsed').on('click',function(){
+      $("#closed").toggle()
+      $(".background").css('top','130px')
+      $("#menuCollapsed").hide()
+  })
+    </script>

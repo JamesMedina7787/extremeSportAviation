@@ -24,5 +24,12 @@
   "bugs": {
     "url": "https://github.com/JamesMedina7787/extremeSportAviation/issues"
   },
-  "homepage": "https://github.com/JamesMedina7787/extremeSportAviation#readme"
+  "homepage": "https://github.com/JamesMedina7787/extremeSportAviation#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "multer": "^1.4.1",
+    "sequelize": "^4.42.0"
+  }
 }
