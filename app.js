@@ -32,7 +32,40 @@ app.get("/locations", (req, res)=>{
 app.get("/our-aircraft", (req, res)=>{
   res.render('our-aircraft')
 })
+app.get("/rotax-service", (req, res)=>{
+  res.render('rotax-service')
+})
 
+app.get("/licenseRating", (req, res)=>{
+  res.render('licenseRating')
+})
+app.get("/contact-us", (req, res)=>{
+  res.render('contact-us')
+})
+app.get("/pilot-supply-kit", (req, res)=>{
+  res.render('pilot-supply-kit')
+})
+app.get("/rentals", (req, res)=>{
+  res.render('rentals')
+})
+app.get("/student-resources", (req, res)=>{
+  res.render('student-resources')
+})
+app.get("/heroes-discount", (req, res)=>{
+  res.render('heroes-discount')
+})
+app.get("/packages", (req, res)=>{
+  res.render('packages')
+})
+app.get("/services", (req, res)=>{
+  res.render('services')
+})
+app.get("/for-sale", (req, res)=>{
+  res.render('for-sale')
+})
+app.get("/local-attractions", (req, res)=>{
+  res.render('local-attractions')
+})
 app.listen(PORT || 3000, ()=>{
   console.log("Server started...")
 })
