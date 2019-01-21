@@ -1,0 +1,166 @@
+/* li{
+
+font-size:40px;
+flex-basis: 12%;
+font-family: sans-serif;
+padding: 2px
+} */
+
+@media (max-width:800px){
+a {
+  flex-basis: 11%;
+}
+
+.listed{
+  width:100%;
+  display: block;
+  font-weight: bold;
+  padding-left: 340px
+}
+.site-container{
+  display: flex;
+  font-family: fantasy;
+    flex-direction: column
+}
+.child-container{
+  flex:1;
+  font-size: 3em;
+
+}
+.power-point{
+  flex-basis: 100%;
+  color:red
+}
+  .mainMenu {
+    display: none;
+    width: 100%
+}
+
+  #menuCollapsed {
+    display:flex;
+}
+
+  #shrunkMenu{
+    flex:1;
+    width: 100%;
+    font-size: 1em;
+   height:25px;
+   position: fixed;
+   padding:1px;
+    background-image: url('/partials/pictures/menu.png');
+  z-index: 1
+  }
+
+   .smallMainMenu {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    width: 100%;
+    height:130px;
+
+    text-shadow: 0.01px 0.01px 0px #7CACDE;
+    box-shadow: 0.01px 0.01px 0.01px #BEE1CA;
+    padding: .01px .030px;
+    margin: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background: #475780;
+    background: linear-gradient(top, #63B8EE, #CCBBE1);
+    background: -ms-linear-gradient(top, #63B8EE, #BBC6E1);
+   }
+   .smallMainMenu a {
+    flex:1;
+    color: #CCBBE1;
+    text-decoration: none;
+    flex-basis: 11%;
+    font-size: .9em;
+    letter-spacing: .2em;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    border-bottom: 1px dotted gray;
+    text-align: center;
+    clear: both; }
+
+   .smallMainMenu li ul {
+    font-size: 4.3em;
+    color: #475780;
+    text-align: center; }
+
+  #closed {
+    display: none;
+    position: relative;
+    background-color: #475780; }
+  }
+
+  @media (min-width:800px){
+    #menuCollapsed {
+      display: none;
+      width: 100%;
+      height:auto;
+      font-size: 1.8em;
+     height:25px;
+     padding:28px;
+      z-index: 5;
+      background-image: url('/partials/pictures/menu.png'); }
+.mainMenu{
+  background-color: black;
+  display:flex;
+  flex-basis: 100%;
+  text-align: center;
+  font-family: sans-serif;
+  color: white;
+  flex-direction: row;
+  align-items: center;
+  height: 100px;
+  width: 11%
+}
+
+.listed{
+  width:100%;
+  display: block;
+  font-weight: bold;
+  padding-left: 340px
+}
+.site-container{
+  display: flex;
+  font-family: fantasy;
+flex-direction: column
+}
+.child-container{
+  flex:1;
+  font-size: 3em;
+
+}
+.power-point{
+  flex-basis: 100%;
+  color:red
+}
+ /* a .menu{
+  flex-basis: 11%;
+  color: blue;
+text-decoration: none;
+} */
+#menu{
+  flex:1;
+  flex-basis: 100%;
+  padding-right: 15px;
+  padding-left: auto;
+  color: white
+}
+    /* menuControls */
+    #closed{
+      display:none;
+
+      background-color: $white;
+    }
+    .smallMainMenu {
+      display: none }
+
+       .smallMainMenu a {
+        display: none
+    }
+       .smallMainMenu li ul {
+        display:none
+  }
+
+  }

@@ -17,6 +17,9 @@ app.get('/', (req, res)=>{
 app.get("/home", (req, res)=>{
   res.render('home')
 })
+app.get("/ground-school", (req, res)=>{
+  res.render('ground-school')
+})
 app.get("/about-us", (req, res)=>{
   res.render('about-us')
 })
@@ -62,6 +65,9 @@ app.get("/services", (req, res)=>{
 })
 app.get("/for-sale", (req, res)=>{
   res.render('for-sale')
+})
+app.get("/success-achievement", (req, res)=>{
+  res.render('success-achievement')
 })
 app.get("/local-attractions", (req, res)=>{
   res.render('local-attractions')
