@@ -5,7 +5,40 @@ flex-basis: 12%;
 font-family: sans-serif;
 padding: 2px
 } */
+.site-container{
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+  width:100%
+}
+.child-container{
+  display: flex;
+  flex-direction: column;
+  margin:10px;
+  padding:10px;
+  width: 80%;
+  flex: 3;
+  opacity: .5;
+  z-index:2;
+}
+li ul .sub{
+  display: none;
+}
+.mainMenu li{
 
+}
+.mainMenu li :hover {
+  background-color: pink;
+  display:block;
+}
+.mainMenu ul li .sub{
+  display: block
+}
+strong {
+  color: blue;
+  font-size: 1.5em;
+  text-shadow: .5;
+}
 @media (max-width:800px){
 a {
   flex-basis: 11%;
@@ -24,7 +57,7 @@ a {
 }
 .child-container{
   flex:1;
-  font-size: 3em;
+  font-size: 1.2em;
 
 }
 .power-point{
@@ -35,7 +68,19 @@ a {
     display: none;
     width: 100%
 }
+li .sub{
+  display: none;
+}
+.mainMenu li{
 
+}
+.mainMenu li :hover {
+  background-color: pink;
+  display:block;
+}
+.mainMenu ul .sub{
+  display: block
+}
   #menuCollapsed {
     display:flex;
 }
@@ -140,6 +185,19 @@ flex-direction: column
   color: blue;
 text-decoration: none;
 } */
+li .sub{
+  display: none;
+}
+.mainMenu li{
+
+}
+.mainMenu li :hover {
+  background-color: pink;
+  display:block;
+}
+.mainMenu ul .sub{
+  display: block
+}
 #menu{
   flex:1;
   flex-basis: 100%;
