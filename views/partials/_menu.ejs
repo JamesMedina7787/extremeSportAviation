@@ -9,16 +9,16 @@
 
     <ul class="mainMenu">
       <li class="mainMenu"><a href="home">Home</a></li>
-      <li class="mainMenu"><a href="intro-to-flight">Intro To Flight</a>
+      <li class="subMenu"><a href="intro-to-flight">Intro To Flight</a>
 
-        <ul>
+        <ul class="sub">
         <li><a href="packages">Rates</a></li>
         <li> <a href="heroes-discount">Heroes Discount</a></li>
 
         </ul>
       </li>
-      <li class="mainMenu"><a  href="flight-training">Flight Training</a>
-        <ul>
+      <li class="subMenu"><a  href="flight-training">Flight Training</a>
+        <ul class="sub">
         <li><a href="rates">Rates</a></li>
         <li><a href="success-achievement">Success and Achievements</a></li>
         <li> <a href="ground-school">Ground School</a></li>
@@ -28,14 +28,14 @@
         <li><a href="student-resources">Student Resources</a></li>
       </ul>
       </li>
-      <li class="mainMenu"><a  href="our-aircraft">Our Aircraft</a>
-        <ul>
+      <li class="subMenu"><a  href="our-aircraft">Our Aircraft</a>
+        <ul class="sub">
         <li><a href="for-sale">For Sale</a></li>
         </ul>
       </li>
       <li class="mainMenu"><a  href="rotax-service">Rotax Service</a></li>
-      <li class="mainMenu"><a  href="about-us">About Us</a>
-        <ul>
+      <li class="subMenu"><a  href="about-us">About Us</a>
+        <ul class="sub">
         <li><a href="services">Rates</a></li>
         <li><a href="locations">Success and Achievements</a></li>
         <li> <a href="local-attractions">Ground School</a></li>
@@ -52,14 +52,14 @@
 
     <ul class="smallMainMenu">
       <li class="menu"><a href="home">Home</a></li>
-      <li class="menu"><a href="intro-to-flight">Intro To Flight</a>
-        <ul>
+      <li class="menuMenu"><a href="intro-to-flight">Intro To Flight</a>
+        <ul class="drop-down">
         <li><a href="packages">Rates</a></li>
         <li> <a href="heroes-discount">Heroes Discount</a></li>
         </ul>
       </li>
-      <li class="menu"><a href="flight-training">Flight Training</a>
-        <ul>
+      <li class="menuMenu"><a href="flight-training">Flight Training</a>
+        <ul class="drop-down">
         <li><a href="rates">Rates</a></li>
         <li><a href="success-achievement">Success and Achievements</a></li>
         <li> <a href="ground-school">Ground School</a></li>
@@ -69,13 +69,13 @@
         <li><a href="student-resources">Student Resources</a></li>
       </ul>
       </li>
-      <li class="menu"><a href="our-aircraft">Our Aircraft</a>
-        <ul>
+      <li class="menuMenu"><a href="our-aircraft">Our Aircraft</a>
+        <ul class="drop-down">
         <li><a href="for-sale">For Sale</a></li>
         </ul>
       </li>
       <li class="menu"><a href="rotax-service">Rotax Service</a></li>
-      <li class="menu"><a href="about-us">About Us</a><ul>
+      <li class="menuMenu"><a href="about-us">About Us</a><ul class="drop-down">
         <li><a href="services">Rates</a></li>
         <li><a href="locations">Success and Achievements</a></li>
         <li> <a href="local-attractions">Ground School</a></li>
@@ -88,7 +88,7 @@
 </div>
 </nav>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
     <script type="text/javascript">
 
@@ -96,5 +96,9 @@
       $("#closed").toggle()
       $(".background").css('top','130px')
       $("#menuCollapsed").hide()
+  })
+
+  $('.sub').on('hover', function(){
+    $('.subMenu').css('display', 'none')
   })
     </script>

@@ -5,27 +5,45 @@ flex-basis: 12%;
 font-family: sans-serif;
 padding: 2px
 } */
+body{
+display: flex;
+}
+.listed{
+  flex: 1;
+  font-weight: bold;
+  color: teal
+}
+.power-point{
+  flex-basis: 100%;
+  color:
+}
+
 .site-container{
   display: flex;
-  flex-direction: row;
-  z-index: 1;
-  width:100%
+  flex-direction: column;
+  width:100%;
+  align-items: center;
 }
 .child-container{
-  display: flex;
-  flex-direction: column;
+  background-image: url("./pictures/apsteal.jpg");
+  background-repeat: no-repeat;
+    background-size: cover;
   margin:10px;
   padding:10px;
   width: 80%;
-  flex: 3;
-  opacity: .5;
+  flex: 2;
   z-index:2;
+  padding: 10px;
+  border: 2px black dotted
 }
-li ul .sub{
+ul li .listed{
+
+}
+ul li ul .sub{
   display: none;
 }
-.mainMenu li{
-
+.mainMenu li .sub{
+color:blue
 }
 .mainMenu li :hover {
   background-color: pink;
@@ -40,47 +58,11 @@ strong {
   text-shadow: .5;
 }
 @media (max-width:800px){
-a {
-  flex-basis: 11%;
-}
 
-.listed{
-  width:100%;
-  display: block;
-  font-weight: bold;
-  padding-left: 340px
-}
-.site-container{
-  display: flex;
-  font-family: fantasy;
-    flex-direction: column
-}
-.child-container{
-  flex:1;
-  font-size: 1.2em;
-
-}
-.power-point{
-  flex-basis: 100%;
-  color:red
-}
   .mainMenu {
     display: none;
-    width: 100%
 }
-li .sub{
-  display: none;
-}
-.mainMenu li{
 
-}
-.mainMenu li :hover {
-  background-color: pink;
-  display:block;
-}
-.mainMenu ul .sub{
-  display: block
-}
   #menuCollapsed {
     display:flex;
 }
@@ -118,16 +100,15 @@ li .sub{
     flex:1;
     color: #CCBBE1;
     text-decoration: none;
-    flex-basis: 11%;
-    font-size: .9em;
+      flex-basis: 100%;
+    text-size: .3em;
     letter-spacing: .2em;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     border-bottom: 1px dotted gray;
     text-align: center;
     clear: both; }
-
    .smallMainMenu li ul {
-    font-size: 4.3em;
+    font-size: 3em;
     color: #475780;
     text-align: center; }
 
@@ -156,48 +137,10 @@ li .sub{
   color: white;
   flex-direction: row;
   align-items: center;
-  height: 100px;
-  width: 11%
+  height: 150px;
 }
 
-.listed{
-  width:100%;
-  display: block;
-  font-weight: bold;
-  padding-left: 340px
-}
-.site-container{
-  display: flex;
-  font-family: fantasy;
-flex-direction: column
-}
-.child-container{
-  flex:1;
-  font-size: 3em;
 
-}
-.power-point{
-  flex-basis: 100%;
-  color:red
-}
- /* a .menu{
-  flex-basis: 11%;
-  color: blue;
-text-decoration: none;
-} */
-li .sub{
-  display: none;
-}
-.mainMenu li{
-
-}
-.mainMenu li :hover {
-  background-color: pink;
-  display:block;
-}
-.mainMenu ul .sub{
-  display: block
-}
 #menu{
   flex:1;
   flex-basis: 100%;
