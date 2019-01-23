@@ -98,14 +98,15 @@
       $("#menuCollapsed").hide()
   })
 var menuItem = document.getElementsByClassName("subMenu")
-var mainMenu = document.getElementsByClassName("mainMenu")
-var smallMainMenumainMenu = document.getElementsByClassName("smallMainMenu")
+var mainMenu = document.getElementsByClassName("menuMenu")
+var smallMainMenu = document.getElementsByClassName("smallMainMenu")
+var menuMenu = document.getElementsByClassName("menuMenu")
 mainMenu.style = "color:silver"
   $(menuItem).hover( function(){
     $(this).children().css('display', 'flex');
     $(this).children().animate({opacity: 1}, 5000)
   })
-  $(menuItem).hover(function(){
+  $(mainMenu).hover(function(){
     $(this).children().css('display', 'flex');
     $(this).children().animate({opacity: 1}, 5000)
   })
