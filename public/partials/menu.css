@@ -11,46 +11,63 @@ display: flex;
 .listed{
   flex: 1;
   font-weight: bold;
-  color: teal
+  color: silver
 }
 .power-point{
   flex-basis: 100%;
-  color:
+  color: orange
 }
 
 .site-container{
   display: flex;
-  flex-direction: column;
-  width:100%;
-  align-items: center;
-}
-.child-container{
   background-image: url("./pictures/apsteal.jpg");
   background-repeat: no-repeat;
     background-size: cover;
+  flex-direction: column;
+  width:100%;
+  align-items: center;
+  opacity: .9
+}
+.child-container{
+  background-image: url("./pictures/home2.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin:10px;
   padding:10px;
   width: 80%;
   flex: 2;
-  z-index:2;
+
   padding: 10px;
-  border: 2px black dotted
+  border: 2px black dotted;
+
 }
 ul li .listed{
 
 }
-ul li ul .sub{
+/* ul .sub{
   display: none;
+
+} */
+.mainMenu{
+  color: silver
+  position: fixed;
+  width: 100%
 }
-.mainMenu li .sub{
-color:blue
+.mainMenu ul{
+  color:silver;
+  display: flex;
 }
 .mainMenu li :hover {
   background-color: pink;
-  display:block;
+
+}
+.mainMenu ul li ul{
+  flex-direction: column;
 }
 .mainMenu ul li .sub{
-  display: block
+  display: none;
+  color:silver;
+
 }
 strong {
   color: blue;
@@ -62,7 +79,14 @@ strong {
   .mainMenu {
     display: none;
 }
+.mainMenu ul li ul{
+  flex-direction: column;
+}
+.mainMenu ul li .sub{
+  display: none;
+  color:silver;
 
+}
   #menuCollapsed {
     display:flex;
 }
@@ -109,7 +133,7 @@ strong {
     clear: both; }
    .smallMainMenu li ul {
     font-size: 3em;
-    color: #475780;
+    color: silver;
     text-align: center; }
 
   #closed {
@@ -140,7 +164,10 @@ strong {
   height: 150px;
 }
 
-
+.drop-down{
+  position: absolute;
+  flex-direction: row;
+}
 #menu{
   flex:1;
   flex-basis: 100%;
