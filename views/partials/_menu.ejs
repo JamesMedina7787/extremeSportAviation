@@ -99,12 +99,14 @@
   })
 var menuItem = document.getElementsByClassName("subMenu")
 var mainMenu = document.getElementsByClassName("mainMenu")
+var smallMainMenumainMenu = document.getElementsByClassName("smallMainMenu")
 mainMenu.style = "color:silver"
   $(menuItem).hover( function(){
-    $('.sub').addClass(''),
-    console.log('huh?')
+    $(this).children().css('display', 'flex');
+    $(this).children().animate({opacity: 1}, 5000)
   })
   $(menuItem).hover(function(){
     $(this).children().css('display', 'flex');
+    $(this).children().animate({opacity: 1}, 5000)
   })
     </script>

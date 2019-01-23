@@ -67,7 +67,7 @@ ul li .listed{
 .mainMenu ul li .sub{
   display: none;
   color:silver;
-
+opacity:0;
 }
 strong {
   color: blue;
@@ -79,14 +79,7 @@ strong {
   .mainMenu {
     display: none;
 }
-.mainMenu ul li ul{
-  flex-direction: column;
-}
-.mainMenu ul li .sub{
-  display: none;
-  color:silver;
 
-}
   #menuCollapsed {
     display:flex;
 }
@@ -135,7 +128,20 @@ strong {
     font-size: 3em;
     color: silver;
     text-align: center; }
+    .smallmenuMenu ul li .drop-down{
+      display: none;
+      opacity: 0;
+      color:silver;
 
+    }
+    .smallMainMenu ul li ul{
+      flex-direction: column;
+    }
+    .smallMainMenu ul li .drop-down{
+      display: none;
+      color:silver;
+opacity:0
+    }
   #closed {
     display: none;
     position: relative;
@@ -167,6 +173,8 @@ strong {
 .drop-down{
   position: absolute;
   flex-direction: row;
+  display: none;
+  opacity:0;
 }
 #menu{
   flex:1;
