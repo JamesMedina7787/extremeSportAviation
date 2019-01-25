@@ -57,7 +57,7 @@ ul li .listed{
 .mainMenu{
   color: silver;
   position: fixed;
-  width: 40%
+  width: 100%
 }
 .mainMenu ul{
   color:silver;
@@ -121,7 +121,7 @@ strong {
    }
    .smallMainMenu a {
     flex:1;
-    color: #CCBBE1;
+    color: silver;
     text-decoration: none;
       flex-basis: 100%;
     font-size: .8em;
