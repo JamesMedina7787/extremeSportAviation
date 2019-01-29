@@ -133,12 +133,7 @@ strong {
    .smallMainMenu li ul {
     color: silver;
     text-align: center; }
-    .smallmenuMenu ul li .drop-down{
-      display: none;
-      opacity: 0;
-      color:silver;
 
-    }
     .smallMainMenu ul li ul{
       flex-direction: column;
     }
@@ -166,7 +161,7 @@ strong {
   background-color: black;
   display:flex;
   flex-direction: column;
-  width: 100%
+  width: 100%;
   flex-basis: 40%;
   text-align: center;
   font-family: sans-serif;
@@ -176,11 +171,12 @@ strong {
   height: 150px;
 }
 
-.drop-down{
-  position: absolute;
-  flex-direction: row;
+.mainMenuContainer .sub{
   display: none;
-  opacity:0;
+  color:silver;
+}
+.sub {
+flex-direction: column;
 }
 #menu{
   flex:1;
