@@ -96,6 +96,8 @@ ul li .listed{
   position: fixed;
   width: 100%;
   align-items: center;
+  border: 1px solid black;
+  justify-content: space-around;
 }
 .mainMenu ul{
   color:silver;
@@ -113,6 +115,7 @@ ul li .listed{
 .mainMenu ul li .sub{
   display: none;
   color:silver;
+  border: 1px solid black;
 }
 strong {
   color: blue;
