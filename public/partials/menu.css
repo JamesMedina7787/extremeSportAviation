@@ -142,14 +142,18 @@ strong {
     background-image: url('/partials/pictures/menu.png');
   z-index: 3
   }
-
+.smallMainMenuContainer{
+  color: black
+}
    .smallMainMenu {
     display: flex;
     position: fixed;
     flex-direction: column;
     width: 100%;
-    height:130px;
-
+    list-style-type: none;
+    color: black;
+  opacity: .43;
+z-index: 3;
     text-shadow: 0.01px 0.01px 0px #7CACDE;
     box-shadow: 0.01px 0.01px 0.01px #BEE1CA;
     padding: .01px .030px;
@@ -163,7 +167,7 @@ strong {
    }
    .smallMainMenu a {
     flex:1;
-    color: silver;
+    color: orange;
     text-decoration: none;
       flex-basis: 100%;
     font-size: .8em;
