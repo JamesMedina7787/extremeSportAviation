@@ -5,20 +5,16 @@ flex-basis: 12%;
 font-family: sans-serif;
 padding: 2px
 } */
-#footer{
-  display:flex;
-  flex-direction: row;
-  text-align: center;
-  align-items: center;
-}
-.mainMenuContainer{
-display: flex;
-align-items: center;
-z-index: 3
-}
+
+
 img{flex:1;width:100%}
 body{
 display: flex;
+}
+strong {
+  color: blue;
+  font-size: 1.5em;
+  text-shadow: .5;
 }
 .listed{
   flex: 1;
@@ -41,9 +37,31 @@ display: flex;
   align-items: center;
   text-align: center;
   z-index: 2
-  /* top: 12px */
+
+}
+.child-container{
+  background-image: url("./pictures/home2.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin:10px;
+  padding:10px;
+  width: 80%;
+  flex: 2;
+
+
+  border: 2px black dotted;
+
+}
+ul li .listed{
+
 }
 /* footer page */
+#footer{
+  display:flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
 #footer-container{
   margin:10px;
   padding:10px;
@@ -71,26 +89,16 @@ flex-basis:60%
 }
 
 /* footer page */
-.child-container{
-  background-image: url("./pictures/home2.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin:10px;
-  padding:10px;
-  width: 80%;
-  flex: 2;
 
 
-  border: 2px black dotted;
 
+
+/* menu items */
+.mainMenuContainer{
+display: flex;
+align-items: center;
+z-index: 3
 }
-ul li .listed{
-
-}
-/* ul .sub{
-  display: none;
-
-} */
 .mainMenu{
   color: silver;
   position: fixed;
@@ -117,19 +125,23 @@ ul li .listed{
   color:silver;
   border: 1px solid black;
 }
-strong {
-  color: blue;
-  font-size: 1.5em;
-  text-shadow: .5;
-}
-@media (max-width:800px){
+/* menu items */
 
+
+
+@media (max-width:800px){
+  /* smallMainMenu */
   .mainMenu {
     display: none;
 }
 
   #menuCollapsed {
     display:flex;
+    height: 100px;
+    position: fixed;
+    z-index: 3;
+    background-color: black;
+      margin: 0 auto
 }
 
   #shrunkMenu{
@@ -139,9 +151,15 @@ strong {
    height:100px;
    position: fixed;
    padding:1px;
-    background-image: url('/partials/pictures/menu.png');
-  z-index: 3
+  background-color: yellow;
+  z-index: 3;
+  opacity: .75;
+  color: maroon;
+  text-align: center;
+  font-size: 3em;
+
   }
+
 .smallMainMenuContainer{
   color: black
 }
@@ -152,7 +170,7 @@ strong {
     width: 100%;
     list-style-type: none;
     color: black;
-  opacity: .43;
+  opacity: .78;
 z-index: 3;
     text-shadow: 0.01px 0.01px 0px #7CACDE;
     box-shadow: 0.01px 0.01px 0.01px #BEE1CA;
@@ -175,7 +193,11 @@ z-index: 3;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     border-bottom: 1px dotted gray;
     text-align: center;
-    clear: both; }
+    }
+
+   .smallMainMenu a:hover{
+     background-color: blue
+   }
    .smallMainMenu li ul {
     color: silver;
     text-align: center; }
@@ -193,11 +215,14 @@ z-index: 3;
     position: relative;
     background-color: #475780; }
   }
+  /* smallMainMenu */
 
   @media (min-width:800px){
+    /* mainMenu */
     #menuCollapsed {
       display: none;
       width: 100%;
+      max-width: 990px;
       height:auto;
       font-size: 1.8em;
      height:25px;
@@ -208,24 +233,31 @@ z-index: 3;
   background-color: yellow;
   display:flex;
   flex-direction: column;
-  width: 100%;
-  flex-basis: 40%;
+  width: 95%;
   text-align: center;
   font-family: sans-serif;
-  font-size: 1.5em;
+  font-size: 1.35em;
   list-style-type: none;
   color: maroon;
   flex-direction: row;
   align-items: center;
   opacity:.43;
+    justify-content: space-between;
 top: 0px
 }
+a.mainMenu {
+  flex: 1 1 0;
 
+  text-decoration: none;
+  text-align: center
+}
 .mainMenuContainer .sub{
+  flex: 1;
   display: none;
   color:silver;
 }
 .sub {
+  flex: 1 1 0;
 flex-direction: column;
 background-color: white
 }
@@ -235,6 +267,12 @@ background-color: white
   padding-right: 15px;
   padding-left: auto;
   color: white
+}
+.subMenu{
+  flex: 1 1 0
+}
+.nav-menu{
+  flex: 1 1 0
 }
     /* menuControls */
     #closed{
@@ -250,5 +288,5 @@ background-color: white
        .smallMainMenu li ul {
         display:none
   }
-
+/* mainMenu */
   }
