@@ -72,6 +72,12 @@ app.get("/success-achievement", (req, res)=>{
 app.get("/local-attractions", (req, res)=>{
   res.render('local-attractions')
 })
+app.get("/rates", (req, res)=>{
+  res.render('rates')
+})
+app.get("/gallery", (req, res)=>{
+  res.render('gallery')
+})
 app.listen(PORT || 3000, ()=>{
   console.log("Server started...")
 })
