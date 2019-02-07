@@ -47,7 +47,7 @@ color:#804000;
 .circleImage:hover {
 box-shadow: 0 0 4px 20px; }
 .pictureContainer{
-  display:flex;flex-direction:row;justify-content: space-between;
+  display:flex;flex-direction:row;width:100%;
 }
 .circleImage:hover h2 {
 transform: scale(1);
@@ -64,7 +64,7 @@ transform: translate(-50%, -50%);}
   flex:1;font-size:1.9em;color:black;border:5px dotted black;padding:8px;margin: 0 auto
 }
 .pictureImage{
-  flex:1;flex-basis:10%;width: 38.5%
+  flex:1;flex-basis:10%;width: 20.5%
 }
 img{flex:1;width:100%}
 body{
@@ -189,7 +189,10 @@ z-index: 3
 }
 /* menu items */
 
-
+.child-container > ul{
+  text-align: left;
+  align-items: flex-start;
+}
 
 @media (max-width:800px){
   /* smallMainMenu */

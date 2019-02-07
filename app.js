@@ -4,6 +4,11 @@ const ejs = require('ejs')
 const bodyParser = require('body-parser')
 const app = express()
 const PORT = process.env.PORT || 3000
+let request = require('request');
+
+
+
+
 
 app.set('view engine', 'ejs')
 
@@ -12,9 +17,31 @@ app.use(bodyParser.urlencoded({extended:false}))
 app.use(express.static('public'))
 
 app.get('/', (req, res)=>{
+  let apiKey = '71ab51c8f81f7f3d79b8a500fe6b9da8';
+  let city = 'ontario';
+  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+
+  request(url, function (err, response, body) {
+    if(err){
+      console.log('error:', error);
+    } else {
+      console.log(body);
+    }
+  });
   res.render('home')
 })
-app.get("/home", (req, res)=>{
+  app.get("/home", (req, res)=>{
+    let apiKey = '71ab51c8f81f7f3d79b8a500fe6b9da8';
+    let city = 'ontario';
+    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+
+    request(url, function (err, response, body) {
+      if(err){
+        console.log('error:', error);
+      } else {
+        console.log(body);
+      }
+    });
   res.render('home')
 })
 app.get("/ground-school", (req, res)=>{
