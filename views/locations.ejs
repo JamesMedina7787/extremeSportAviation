@@ -9,10 +9,50 @@
   <body>
         <%- include partials/_menu %>
     <div class="site-container">
-
+      <div id="map" style="height:400px;width:80%">
+      </div>
       <div class="footer-container">
         <%- include partials/_footer %>
       </div>
     </div>
+    <script type="text/javascript">
+
+      function initMap(){
+        var options={
+          zoom:9,
+          center:{lat:44.2620, lng:-79.5755}
+        }
+        var map = new google.maps.Map(document.getElementById('map'), options)
+        var marker = new google.maps.Marker({
+          map: map,
+          position: {lat:44.2620, lng:-79.5755},
+          title: 'Extreme Sports Aviation',
+          icon:'http://maps.google.com/mapfiles/kml/shapes/airports.png'
+        })
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<p>Edendvale, Ontario</p>'
+        })
+
+        marker.addListener('click', function(){
+        infoWindow.open(map,marker)})
+
+
+      //   marker.addListener('click', toggleBounce());
+      //
+      //
+      // function toggleBounce() {
+      //   if (marker.getAnimation() !== null) {
+      //     marker.setAnimation(1000);
+      //   } else {
+      //     marker.setAnimation(google.maps.Animation.BOUNCE);
+      //   }
+      //
+      //   }
+    }
+
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBO_mb_RfGm_DbNLuMWYmhtxuAVjVQQ23w&callback=initMap"  async defer>
+    </script>
   </body>
 </html>
