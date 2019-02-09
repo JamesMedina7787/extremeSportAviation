@@ -140,6 +140,18 @@ Note* Your purchase is for time spent in the air (not wasted on the ground). Whe
   <a  href="packages"> <img style="flex:3;width:100%" src="./partials/pictures/intro-flight.webp" alt="goPro"></a>
 <div id="map" style="height:400px;width:80%">
 </div>
+<div class="child-container">
+   <% for(x = 1; x < 40; x++){ %>
+  <ul>
+  <h3 class="list-heading">Weather For Edenvale, Ontario, Canada</h3> <br>
+
+<li class="listed"><%=TenDayWeather[x].date %> </li><br>
+<li class="listed"><%=TenDayWeather[x].temperature %> degrees </li> <br>
+<li class="listed"><%=TenDayWeather[x].wind.speed %> mph </li><br>
+<img style="width:80px"src="http://openweathermap.org/img/w/<%=TenDayWeather[x].icon %>.png" alt="xsa flight"> <br>
+</ul>
+<% }  %>
+</div>
 <div class="footer-container">
   <%- include partials/_footer %>
 </div>

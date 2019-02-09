@@ -21,30 +21,70 @@ app.use(express.static('public'))
 app.get('/', (req, res)=>{
   let apiKey = '71ab51c8f81f7f3d79b8a500fe6b9da8';
   let city = 'ontario';
-  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+  let url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`
 
   request(url, function (err, response, body) {
     if(err){
       console.log('error:', error);
     } else {
-      console.log(body);
+      var grr = JSON.parse(body)
+      var TenDayWeather=[];
+for(let x = 0;x < 40; x++){
+      var weather = {
+        dt_text: city,
+        temperature: Math.round((grr.list[x].main.temp) / 10),
+        clouds:grr.list[x].clouds,
+        wind:grr.list[x].wind,
+        rain:grr.list[x].rain,
+        snow:grr.list[x].snow,
+        description:grr.list[x].icon,
+        icon:grr.list[x].weather[0].icon,
+        date: grr.list[x].dt_txt
+      }
+      TenDayWeather.push(weather)
+      weather = ''
+    }
+      var weather_data = {TenDayWeather:TenDayWeather}
+        console.log(TenDayWeather[2]);
+
+      res.render('home', weather_data)
     }
   });
-  res.render('home')
-})
-  app.get("/home", (req, res)=>{
-    let apiKey = '71ab51c8f81f7f3d79b8a500fe6b9da8';
-    let city = 'ontario';
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
 
-    request(url, function (err, response, body) {
-      if(err){
-        console.log('error:', error);
-      } else {
-        console.log(body);
+})
+app.get('/home', (req, res)=>{
+  let apiKey = '71ab51c8f81f7f3d79b8a500fe6b9da8';
+  let city = 'ontario';
+  let url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`
+
+  request(url, function (err, response, body) {
+    if(err){
+      console.log('error:', error);
+    } else {
+      var grr = JSON.parse(body)
+      var TenDayWeather=[];
+for(let x = 0;x < 40;x++){
+      var weather = {
+        dt_text: city,
+        temperature: Math.round((grr.list[x].main.temp) / 10),
+        clouds:grr.list[x].clouds,
+        wind:grr.list[x].wind,
+        rain:grr.list[x].rain,
+        snow:grr.list[x].snow,
+        description:grr.list[x].icon,
+        icon:grr.list[x].weather[0].icon,
+        date: grr.list[x].dt_txt
       }
-    });
-  res.render('home')
+      TenDayWeather.push(weather)
+      weather = ''
+    }
+      var weather_data = {TenDayWeather:TenDayWeather}
+        console.log(TenDayWeather[2]);
+
+      res.render('home', weather_data)
+    }
+  });
+
 })
 app.get("/ground-school", (req, res)=>{
   res.render('ground-school')
