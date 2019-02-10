@@ -29,7 +29,7 @@ app.get('/', (req, res)=>{
     } else {
       var grr = JSON.parse(body)
       var TenDayWeather=[];
-for(let x = 0;x < 40; x++){
+for(let x = 0;x < 36; x++){
       var weather = {
         dt_text: city,
         temperature: Math.round((grr.list[x].main.temp) / 10),
@@ -45,7 +45,7 @@ for(let x = 0;x < 40; x++){
       weather = ''
     }
       var weather_data = {TenDayWeather:TenDayWeather}
-        console.log(TenDayWeather[2]);
+        console.log(grr.list[0].main.temp);
 
       res.render('home', weather_data)
     }
@@ -63,7 +63,7 @@ app.get('/home', (req, res)=>{
     } else {
       var grr = JSON.parse(body)
       var TenDayWeather=[];
-for(let x = 0;x < 40;x++){
+for(let x = 0;x < 36;x++){
       var weather = {
         dt_text: city,
         temperature: Math.round((grr.list[x].main.temp) / 10),
@@ -74,12 +74,14 @@ for(let x = 0;x < 40;x++){
         description:grr.list[x].icon,
         icon:grr.list[x].weather[0].icon,
         date: grr.list[x].dt_txt
+
       }
+      console.log(`${x}`)
       TenDayWeather.push(weather)
       weather = ''
     }
       var weather_data = {TenDayWeather:TenDayWeather}
-        console.log(TenDayWeather[2]);
+        console.log(grr);
 
       res.render('home', weather_data)
     }
