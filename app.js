@@ -29,7 +29,7 @@ app.get('/', (req, res)=>{
     } else {
       var grr = JSON.parse(body)
       var TenDayWeather=[];
-for(let x = 0;x < 36; x++){
+for(let x = 0;x < 32; x++){
       var weather = {
         dt_text: city,
         temperature: Math.round((grr.list[x].main.temp) / 10),

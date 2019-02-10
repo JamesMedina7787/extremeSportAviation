@@ -69,6 +69,7 @@ transform: translate(-50%, -50%);}
 img{flex:1;width:100%}
 body{
 display: flex;
+flex-direction: column
 }
 ul{
   list-style-type: none

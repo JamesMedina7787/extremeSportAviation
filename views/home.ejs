@@ -4,14 +4,15 @@
     <meta charset="utf-8">
     <title>Extreme Sport Aviation</title>
     <%- include partials/_mobile %>
-
+    <link href="./partials/menu.css" rel='stylesheet'>
+<%- include partials/_bootStrap %>
   </head>
 
-  <body>
-    <div class="menu" style="display:flex; flex-direction:row">
-      <%- include partials/_menu %>
-    </div>
 
+
+
+  <body>
+<%- include partials/_menu %>
 <div class='site-container'>
 <img src="./partials/pictures/xsa.gif" alt="extreme sports aviation logo">
 <h1 class="page-heading">Home</h1>
@@ -141,7 +142,7 @@ Note* Your purchase is for time spent in the air (not wasted on the ground). Whe
 <div id="map" style="height:400px;width:80%">
 </div>
 <div class="child-container">
-  <% for(x = 1; x < 36; x=x+4){ %>
+  <% for(x = 0; x < 30; x=x+4){ %>
  <ul>
  <h3 class="list-heading">Weather For Edenvale, Ontario, Canada</h3> <br>
 <li class="listed"><%=TenDayWeather[x].date %> </li><br>
@@ -189,5 +190,6 @@ Note* Your purchase is for time spent in the air (not wasted on the ground). Whe
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBO_mb_RfGm_DbNLuMWYmhtxuAVjVQQ23w&callback=initMap"  async defer>
 </script>
+
   </body>
 </html>
