@@ -194,165 +194,34 @@ z-index: 3
   text-align: left;
   align-items: flex-start;
 }
-
+#topContainer{
+  display:flex;
+  flex-direction:row;
+  color:#1d206d;
+  font-family:bazooka;}
+  #topContained{
+    margin-bottom:0px;
+    background-color:silver;
+    height:200px}
 @media (max-width:800px){
   /* smallMainMenu */
-  .mainMenu {
-    display: none;
+
+.page-heading{
+  font-weight:bolder;
+  font-size:3.1em;
+  padding:.33em;
+  font-family: tubular
 }
-
-  #menuCollapsed {
-    display:flex;
-    height: 100px;
-    position: fixed;
-    z-index: 3;
-    background-color: black;
-      margin: 0 auto
-}
-
-  #shrunkMenu{
-    flex:1;
-    width: 100%;
-    font-size: .5em;
-   height:100px;
-   position: fixed;
-   padding:1px;
-  background-color: yellow;
-  z-index: 3;
-  opacity: .75;
-  color: maroon;
-  text-align: center;
-  font-size: 3em;
-
-  }
-
-.smallMainMenuContainer{
-  color: black
-}
-   .smallMainMenu {
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    width: 100%;
-    list-style-type: none;
-    color: black;
-  opacity: .78;
-z-index: 3;
-    text-shadow: 0.01px 0.01px 0px #7CACDE;
-    box-shadow: 0.01px 0.01px 0.01px #BEE1CA;
-    padding: .01px .030px;
-    margin: 0px;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
-    background: #475780;
-    background: linear-gradient(top, #63B8EE, #CCBBE1);
-    background: -ms-linear-gradient(top, #63B8EE, #BBC6E1);
-   }
-   .smallMainMenu a {
-    flex:1;
-    color: orange;
-    text-decoration: none;
-      flex-basis: 100%;
-    font-size: .8em;
-    letter-spacing: .2em;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
-    border-bottom: 1px dotted gray;
-    text-align: center;
-    }
-
-   .smallMainMenu a:hover{
-     background-color: blue
-   }
-   .smallMainMenu li ul {
-    color: silver;
-    text-align: center; }
-
-    .smallMainMenu ul li ul{
-      flex-direction: row;
-    }
-    .smallMainMenu ul li ul .drop-down{
-      display: none;
-      color:silver;
-          flex-direction: row;
-    }
-  #closed {
-    display: none;
-    position: relative;
-    background-color: #475780; }
-  }
   /* smallMainMenu */
-
+}
   @media (min-width:800px){
     /* mainMenu */
-    #menuCollapsed {
-      display: none;
-      width: 100%;
-      max-width: 990px;
-      height:auto;
-      font-size: 1.8em;
-     height:25px;
-     padding:28px;
-      z-index: 3;
-      background-image: url('/partials/pictures/menu.png'); }
-.mainMenu{
-  background-color: yellow;
-  display:flex;
-  flex-direction: column;
-  width: 95%;
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 1.35em;
-  list-style-type: none;
-  color: maroon;
-  flex-direction: row;
-  align-items: center;
-  opacity:.43;
-    justify-content: space-between;
-top: 0px
-}
-a.mainMenu {
-  flex: 1 1 0;
-
-  text-decoration: none;
-  text-align: center
-}
-.mainMenuContainer .sub{
-  flex: 1;
-  display: none;
-  color:silver;
-}
-.sub {
-  flex: 1 1 0;
-flex-direction: column;
-background-color: white
-}
-#menu{
-  flex:1;
-  flex-basis: 100%;
-  padding-right: 15px;
-  padding-left: auto;
-  color: white
-}
-.subMenu{
-  flex: 1 1 0
-}
-.nav-menu{
-  flex: 1 1 0
-}
-    /* menuControls */
-    #closed{
-      display:none;
-      background-color: $white;
+    .page-heading{
+      font-weight:bolder;
+      font-size:5.1em;
+      padding:.17em;
+      font-family: tubular;
+      margin: 0 auto;
     }
-    .smallMainMenu {
-      display: none }
-
-       .smallMainMenu a {
-        display: none
-    }
-       .smallMainMenu li ul {
-        display:none
-  }
 /* mainMenu */
   }
