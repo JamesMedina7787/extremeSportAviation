@@ -18,12 +18,10 @@
   padding: 10px;
 }
 /* gallery */
-.number{
-  font-size: 3em;
-  color: #800033
-}
+
 .added{
-  color:silver
+  color:#633905;
+  font-family: technical
 }
 .literature{
 font-size: 1.25em;
@@ -75,8 +73,7 @@ ul{
   list-style-type: none
 }
 strong {
-  color: blue;
-  font-size: 1.5em;
+color:#1d206d;
   text-shadow: .5;
 }
 .listed{
@@ -212,10 +209,18 @@ z-index: 3
   padding:.33em;
   font-family: tubular
 }
+.number{
+  font-size: 1.5em;
+  color: #800033
+}
   /* smallMainMenu */
 }
   @media (min-width:800px){
     /* mainMenu */
+    .number{
+      font-size: 2.7em;
+      color: #800033
+    }
     .page-heading{
       font-weight:bolder;
       font-size:5.1em;
