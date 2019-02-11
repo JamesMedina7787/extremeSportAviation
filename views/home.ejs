@@ -138,7 +138,7 @@ An introductory Flight Lesson is the perfect way for you - or a loved one - to b
 <br>
 </section>
 
-<span class="added">
+<span class="added" style="color: silver">
 Note* Your purchase is for time spent in the air (not wasted on the ground). When budgeting your time add approximately 15 minutes to your purchased flight time for your safety briefing. Please phone us at 705-999-3221 to arrange your flight time and date.  Keep in mind safety is our biggest priority.  Unsafe weather conditions (high winds, thunderstorms, heavy rain & Snow) may impact your booking time, We will do our best to work within your schedule. Summer months tend to be busier. If booking online please allow 1-10 days to redeem your intro to flight *Cancellations & Postponements-Please notify us by phone or email, 24hrs prior to your booking time .  Flight time Purchased is valid for 120 days.  Non refundable
 <br>
 </span>
@@ -152,15 +152,16 @@ Note* Your purchase is for time spent in the air (not wasted on the ground). Whe
 <div id="map" style="height:400px;width:80%">
 </div>
 <div class="child-container">
+   <h3 class="list-heading">Weather For Edenvale, Ontario, Canada</h3> <br>
+
   <% for(x = 0; x < 30; x=x+4){ %>
- <ul>
- <h3 class="list-heading">Weather For Edenvale, Ontario, Canada</h3> <br>
-<li class="listed"><%=TenDayWeather[x].date %> </li><br>
-<li class="listed"><%=TenDayWeather[x].temperature %> degrees </li> <br>
-<li class="listed"><%=TenDayWeather[x].wind.speed %> mph </li><br>
-<img style="width:80px"src="http://openweathermap.org/img/w/<%=TenDayWeather[x].icon %>.png" alt="xsa flight"> <br>
-</ul>
+    <div class="gallery" style="color:#804000; font-family:bazooka">
+<div class="serviceGallery" style="color:#804000; font-family:cuckoo"><%=TenDayWeather[x].date %> </div>
+<div class="serviceGallery" style="color:#804000; font-family:market"><%=TenDayWeather[x].temperature %> degrees </div>
+<div class="serviceGallery" style="color:#804000; font-family:market"><%=Math.round(TenDayWeather[x].wind.speed * 10) %> mph</div>
+<img style="width:80px" style="color:#804000; font-family:market" src="http://openweathermap.org/img/w/<%=TenDayWeather[x].icon %>.png" alt="xsa flight"></img> <br>
 <% }  %>
+ </div>
 </div>
 <div class="footer-container">
   <%- include partials/_footer %>
