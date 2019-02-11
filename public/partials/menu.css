@@ -188,8 +188,10 @@ z-index: 3
 /* menu items */
 
 .child-container > ul{
+  font-family: cornerstone;
   text-align: left;
   align-items: flex-start;
+  color: #002080
 }
 #topContainer{
   display:flex;
@@ -205,7 +207,7 @@ z-index: 3
 
 .page-heading{
   font-weight:bolder;
-  font-size:3.1em;
+  font-size:2.5em;
   padding:.33em;
   font-family: tubular
 }
