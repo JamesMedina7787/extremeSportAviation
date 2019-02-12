@@ -10,6 +10,8 @@
   display:flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  text-align: center;
 }
 .serviceGallery{
   flex:1;
@@ -210,40 +212,44 @@ z-index: 3
       font-weight: bold;
       color: #002080
     }
-    div.power-point{
-      flex-basis: 100%;
-      color: #802000;
-      font-size: 1.7em;
-    }
-    .power-point{
-      flex-basis: 100%;
-      color: #802000;
-      font-size: 1.7em;
-    }
-    p.added{
-      color:#331e05;
-      font-family: technical;
-      font-stretch: expanded;
-      font-size: 1.4em
-    }
-    .added{
-      color:#331e05;
-      font-family: technical;
-      font-stretch: expanded;
-      font-size: 1.4em
-    }
-    span.added{
-      color:#804000;
-      font-family: bazooka;
-      font-stretch: expanded;
-      font-size: 1.4em
-    }
-    .literature{
-    font-size: 1.25em;
-    color:#804000;
-    }
+
+
+.power-point{
+  text-decoration: underline;
+}
+img.vertGallery{
+  max-width: 200px
+}
 @media (max-width:800px){
   /* smallMainMenu */
+  .added{
+    color:#331e05;
+    font-family: technical;
+    font-stretch: expanded;
+    font-size: 1.2em
+  }
+
+  .literature{
+  font-size: .95em;
+  color:#804000;
+  }
+  span.added{
+    color:#804000;
+    font-family: bazooka;
+    font-stretch: expanded;
+    font-size: 1.2em
+  }
+  p.added{
+    color:#331e05;
+    font-family: technical;
+    font-stretch: expanded;
+    font-size: 1.1em
+  }
+  div.power-point{
+    flex-basis: 100%;
+    color: #802000;
+    font-size: 1.43em;
+  }
   .message{
     font-size: 1.3em;
     color:#1d206d;
@@ -252,7 +258,8 @@ z-index: 3
   }
 .list-heading{
   color:#1d206d;
-  font-size: 1.5em
+  font-size: 1.5em;
+  text-decoration: underline;
 }
 .page-heading{
   font-weight:bolder;
@@ -264,10 +271,49 @@ z-index: 3
   font-size: 2em;
   color: #800033
 }
+.power-point{
+  flex-basis: 100%;
+  color: #802000;
+  font-size: 1.43em;
+  font-weight: bolder;
+}
   /* smallMainMenu */
 }
   @media (min-width:800px){
     /* mainMenu */
+    .added{
+      color:#331e05;
+      font-family: technical;
+      font-stretch: expanded;
+      font-size: 1.4em
+    }
+
+    .literature{
+    font-size: 1.25em;
+    color:#804000;
+    }
+    span.added{
+      color:#804000;
+      font-family: bazooka;
+      font-stretch: expanded;
+      font-size: 1.4em
+    }
+    p.added{
+      color:#331e05;
+      font-family: technical;
+      font-stretch: expanded;
+      font-size: 1.4em
+    }
+    div.power-point{
+      flex-basis: 100%;
+      color: #802000;
+      font-size: 1.7em;
+    }
+    .power-point{
+      flex-basis: 100%;
+      color: #802000;
+      font-size: 1.7em;
+    }
     .list-heading{
       font-size: 3em;
       color:#1d206d;
