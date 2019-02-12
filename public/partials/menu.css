@@ -19,15 +19,10 @@
   padding: 10px;
 }
 /* gallery */
+.backgroundText{
+  color:silver
+}
 
-.added{
-  color:#633905;
-  font-family: technical
-}
-.literature{
-font-size: 1.25em;
-color:#804000;
-}
 .threePictureContainer{
   display: flex;
   flex-direction: row;
@@ -68,7 +63,8 @@ transform: translate(-50%, -50%);}
 img{flex:1;width:100%}
 body{
 display: flex;
-flex-direction: column
+flex-direction: column;
+font-family: bazooka
 }
 ul{
   list-style-type: none;
@@ -85,7 +81,14 @@ color:#1d206d;
 }
 .power-point{
   flex-basis: 100%;
-  color: #802000
+  color: #802000;
+  font-size: 1.2em;
+}
+span.number{
+  font-size: 1.2em
+}
+strong.number{
+  font-size: 1.9em
 }
 .img{
 }
@@ -109,8 +112,8 @@ color:#1d206d;
   padding:10px;
   width: 80%;
   flex: 2;
-  color:color:#1d206d;
-
+  color:#1d206d;
+  font-family: technical;
   border: 2px black dotted;
 
 }
@@ -153,7 +156,7 @@ flex-basis:60%
 
 
 /* menu items */
-.mainMenuContainer{
+/* .mainMenuContainer{
 display: flex;
 align-items: center;
 z-index: 3
@@ -171,25 +174,27 @@ z-index: 3
   display: flex;
   height: 100%;
   align-items: center;
+  font-family: olive
 }
 .mainMenu li :hover {
   background-color: pink;
 
-}
-.mainMenu ul li ul{
+} */
+/* .mainMenu ul li ul{
   flex-direction: column;
 }
 .mainMenu ul li .sub{
   display: none;
   color:silver;
   border: 1px solid black;
-}
+} */
 /* menu items */
 
 .child-container > ul{
   font-family: cornerstone;
   text-align: left;
   align-items: flex-start;
+  font-family: denmark;
   color: #002080
 }
 #topContainer{
@@ -201,14 +206,50 @@ z-index: 3
     margin-bottom:0px;
     background-color:silver;
     height:200px}
-    .message{
-      font-size: 1.7em;
-      color:#1d206d;
+    .listed{
       font-weight: bold;
-      font-style: italic;
+      color: #002080
+    }
+    div.power-point{
+      flex-basis: 100%;
+      color: #802000;
+      font-size: 1.7em;
+    }
+    .power-point{
+      flex-basis: 100%;
+      color: #802000;
+      font-size: 1.7em;
+    }
+    p.added{
+      color:#331e05;
+      font-family: technical;
+      font-stretch: expanded;
+      font-size: 1.4em
+    }
+    .added{
+      color:#331e05;
+      font-family: technical;
+      font-stretch: expanded;
+      font-size: 1.4em
+    }
+    span.added{
+      color:#804000;
+      font-family: bazooka;
+      font-stretch: expanded;
+      font-size: 1.4em
+    }
+    .literature{
+    font-size: 1.25em;
+    color:#804000;
     }
 @media (max-width:800px){
   /* smallMainMenu */
+  .message{
+    font-size: 1.3em;
+    color:#1d206d;
+    font-weight: bold;
+    font-style: italic;
+  }
 .list-heading{
   color:#1d206d;
   font-size: 1.5em
@@ -220,7 +261,7 @@ z-index: 3
   font-family: tubular
 }
 .number{
-  font-size: 3em;
+  font-size: 2em;
   color: #800033
 }
   /* smallMainMenu */
@@ -230,6 +271,12 @@ z-index: 3
     .list-heading{
       font-size: 3em;
       color:#1d206d;
+    }
+    .message{
+      font-size: 1.7em;
+      color:#1d206d;
+      font-weight: bold;
+      font-style: italic;
     }
     .number{
       font-size: 2.7em;
