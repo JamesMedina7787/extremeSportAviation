@@ -107,7 +107,7 @@ strong.number{
 
 }
 .child-container{
-  background-image: url("./pictures/sky.jpeg");
+  background-image: url("./pictures/sky.png");
   background-repeat: no-repeat;
   background-size: cover;
   margin:10px;
