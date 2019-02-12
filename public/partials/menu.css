@@ -226,7 +226,7 @@ img.vertGallery{
     color:#331e05;
     font-family: technical;
     font-stretch: expanded;
-    font-size: 1.2em
+    font-size: 1.1em
   }
 
   .literature{
@@ -237,13 +237,13 @@ img.vertGallery{
     color:#804000;
     font-family: bazooka;
     font-stretch: expanded;
-    font-size: 1.2em
+    font-size: 1.1em
   }
   p.added{
     color:#331e05;
     font-family: technical;
     font-stretch: expanded;
-    font-size: 1.1em
+    font-size: 1em
   }
   div.power-point{
     flex-basis: 100%;
@@ -285,7 +285,7 @@ img.vertGallery{
       color:#331e05;
       font-family: technical;
       font-stretch: expanded;
-      font-size: 1.4em
+      font-size: 1.3em
     }
 
     .literature{
@@ -296,13 +296,13 @@ img.vertGallery{
       color:#804000;
       font-family: bazooka;
       font-stretch: expanded;
-      font-size: 1.4em
+      font-size: 1.3em
     }
     p.added{
       color:#331e05;
       font-family: technical;
       font-stretch: expanded;
-      font-size: 1.4em
+      font-size: 1.3em
     }
     div.power-point{
       flex-basis: 100%;
