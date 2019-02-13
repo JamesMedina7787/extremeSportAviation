@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const app = express()
 const handlebars = require('express-handlebars')
 const mailer = require('nodemailer')
+const paypal = require('paypal-rest-sdk')
 const PORT = process.env.PORT || 3000
 let request = require('request');
 
@@ -45,7 +46,7 @@ for(let x = 0;x < 32; x++){
       weather = ''
     }
       var weather_data = {TenDayWeather:TenDayWeather}
-        console.log(grr.list[0].main.temp);
+
 
       res.render('home', weather_data)
     }
@@ -76,12 +77,12 @@ for(let x = 0;x < 30;x++){
         date: grr.list[x].dt_txt
 
       }
-      console.log(`${x}`)
+
       TenDayWeather.push(weather)
       weather = ''
     }
       var weather_data = {TenDayWeather:TenDayWeather}
-        console.log(grr);
+
 
       res.render('home', weather_data)
     }
@@ -207,6 +208,85 @@ app.get("/rates", (req, res)=>{
 app.get("/gallery", (req, res)=>{
   res.render('gallery')
 })
+app.get("/paypal", (req,res)=>{
+  res.render("paypal")
+})
+
+paypal.configure({
+  'mode': 'sandbox',
+  'client_id':
+  'Aaf-XzeXw1WOLFJDf2nQ-GbpHtA5q3lFbuPgcCghaoK_XdJP96Sy5MXDFVvH1jtZghVCeSZFXMrGBNIx',
+  'client_secret':'EMw01cuDOGcQ4vK0Co2MQsRmjdUkRkTQST_5La-AzBVZBi13fj-M3hdIe3ShNPVjWKXPzlUhsWkwHwOA'
+})
+
+app.post("/pay", (req,res)=>{
+  const create_payment_json = {
+    "intent": "sale",
+    "payer": {
+        "payment_method": "paypal"
+    },
+    "redirect_urls": {
+        "return_url": "http://localhost:3000/success",
+        "cancel_url": "http://localhost:3000/cancel"
+    },
+    "transactions": [{
+        "item_list": {
+            "items": [{
+              //fields from our form
+                "name": "one flight",
+                //product number i guess
+                "sku": "001",
+                "price": "1.00",
+                "currency": "USD",
+                "quantity": 1
+            }]
+        },
+        "amount": {
+            "currency": "USD",
+            "total": "1.00"
+        },
+        "description": "This is the payment description."
+    }]
+};
+paypal.payment.create(create_payment_json, function (error, payment) {
+    if (error) {
+        throw error;
+    } else {
+        for(let i = 0; i < payment.links.length; i++){
+          if(payment.links[i].rel === 'approval_url'){
+            res.redirect(payment.links[i].href)
+          }
+        }
+    }
+});
+})
+//payroute end here
+app.get('/success', (req, res)=>{
+  const payerId = req.query.PayerID
+  const paymentId = req.query.paymentId
+  console.log(`${payerId} ** this is the payerId`)
+  console.log(`${paymentId} ** this is the payerId`)
+  var execute_payment_json = {
+    "payer_id": payerId,
+    "transactions": [{
+        "amount": {
+            "currency": "USD",
+            "total": "1.00"
+        }
+    }]
+};
+paypal.payment.execute(paymentId, execute_payment_json, function (error, payment) {
+    if (error) {
+        console.log(error.response);
+        throw error;
+    } else {
+        console.log(JSON.stringify(payment));
+        res.send('success')
+    }
+});
+});
+app.get('/cancel', (req, res)=>res.send('Cancelled'))
 app.listen(PORT || 3000, ()=>{
   console.log("Server started...")
-})
+}
+)
