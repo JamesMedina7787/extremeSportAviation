@@ -1,4 +1,17 @@
 /* gallery */
+h1{
+  font-size: 2rem;
+}
+h2{
+  font-size: 1.70rem
+}
+h3{
+  font-size: 1.50rem;
+}
+h4{
+  font-size: 1.20rem;
+}
+
 .gallery{
   display: flex;
   flex-wrap: wrap;
