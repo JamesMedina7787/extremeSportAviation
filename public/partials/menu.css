@@ -198,8 +198,14 @@ z-index: 3
   font-family: cornerstone;
   text-align: left;
   align-items: flex-start;
-  font-family: denmark;
-  color: #002080
+  font-family: denmark, ;
+  color: #002080;
+  list-style-image: url('./pictures/cutout-plane.png');list-style-type: square;
+}
+
+
+.child-container > ul li{
+
 }
 #topContainer{
   display:flex;
