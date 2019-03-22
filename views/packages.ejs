@@ -10,6 +10,16 @@
 <%- include partials/_menu %>
     <div class="site-container">
 <h1 class="page-heading">Packages</h1>
+<form class="" action="/pay" method="post">
+
+  <label>Quantity:</label>
+  <select class="" name="option">
+    <option value="1.00">1.00</option>
+    <option value="2.00">2.00</option>
+  </select>
+<button type="submit">place order</button>
+
+</form>
       <div class="child-container">
 
 <ul class="message">
@@ -18,6 +28,7 @@ Design your own adventure with this exciting flight. In addition to the introduc
 </span>
 
 <li class="listed">
+
 45 Minute flight (Air Time) <span class="number"> $185.00</span>
 </li><li class="listed">
 2 hour flight (Air Time) <span class="number"> $350.00</span>
@@ -26,7 +37,7 @@ Best Value!
 </span>
 </li>
 ​<li class="listed">
-Cottage Country Tour - <span class="number">$300.00</span>
+Cottage Country Tour - <span class="number" name="cottage">$300.00</span>
 
 Want to fly a plane over your cottage and wave to your family & guests? This one and a half hour intro to flight includes a pre-flight briefing, intro to the aircraft and one hour and thirty minute tour of Muskoka cottage country where you take control of the aircraft and complete your first flight. Included is an aerial picture of your cottage-Call for details
 

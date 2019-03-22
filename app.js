@@ -30,7 +30,7 @@ app.get('/', (req, res)=>{
     } else {
       var grr = JSON.parse(body)
       var TenDayWeather=[];
-for(let x = 0;x < 32; x++){
+for(let x = 0;x < 30;x++){
       var weather = {
         dt_text: city,
         temperature: Math.round((grr.list[x].main.temp) / 10),
@@ -41,7 +41,9 @@ for(let x = 0;x < 32; x++){
         description:grr.list[x].icon,
         icon:grr.list[x].weather[0].icon,
         date: grr.list[x].dt_txt
+
       }
+
       TenDayWeather.push(weather)
       weather = ''
     }
@@ -187,7 +189,9 @@ app.get("/student-resources", (req, res)=>{
 app.get("/heroes-discount", (req, res)=>{
   res.render('heroes-discount')
 })
+
 app.get("/packages", (req, res)=>{
+  console.log(`*****${req.body}*****`)
   res.render('packages')
 })
 app.get("/services", (req, res)=>{
@@ -208,7 +212,7 @@ app.get("/rates", (req, res)=>{
 app.get("/gallery", (req, res)=>{
   res.render('gallery')
 })
-app.get("/paypal", (req,res)=>{
+app.get("/", (req,res)=>{
   res.render("paypal")
 })
 
@@ -219,14 +223,17 @@ paypal.configure({
   'client_secret':'EMw01cuDOGcQ4vK0Co2MQsRmjdUkRkTQST_5La-AzBVZBi13fj-M3hdIe3ShNPVjWKXPzlUhsWkwHwOA'
 })
 
+
 app.post("/pay", (req,res)=>{
+
+  var price =  req.body.option
   const create_payment_json = {
     "intent": "sale",
     "payer": {
         "payment_method": "paypal"
     },
     "redirect_urls": {
-        "return_url": "http://localhost:3000/success",
+        "return_url": `http://localhost:3000/success/${price}`, //
         "cancel_url": "http://localhost:3000/cancel"
     },
     "transactions": [{
@@ -236,18 +243,19 @@ app.post("/pay", (req,res)=>{
                 "name": "one flight",
                 //product number i guess
                 "sku": "001",
-                "price": "1.00",
+                "price": price,
                 "currency": "USD",
                 "quantity": 1
             }]
         },
         "amount": {
             "currency": "USD",
-            "total": "1.00"
+            "total": price
         },
         "description": "This is the payment description."
     }]
 };
+
 paypal.payment.create(create_payment_json, function (error, payment) {
     if (error) {
         throw error;
@@ -260,18 +268,20 @@ paypal.payment.create(create_payment_json, function (error, payment) {
     }
 });
 })
+var route = '/[-\d\.]+/'
 //payroute end here
-app.get('/success', (req, res)=>{
+app.get('/success/:route', (req, res)=>{
   const payerId = req.query.PayerID
   const paymentId = req.query.paymentId
-  console.log(`${payerId} ** this is the payerId`)
-  console.log(`${paymentId} ** this is the payerId`)
+  const priced = req.params.route
+console.log(`${req.query.PayerID} *** ${req.query.paymentId}  *** ${priced}`)
+  // console.log(`${price}`)
   var execute_payment_json = {
     "payer_id": payerId,
     "transactions": [{
         "amount": {
             "currency": "USD",
-            "total": "1.00"
+            "total": `${priced}`
         }
     }]
 };
@@ -280,8 +290,7 @@ paypal.payment.execute(paymentId, execute_payment_json, function (error, payment
         console.log(error.response);
         throw error;
     } else {
-        console.log(JSON.stringify(payment));
-        res.send('success')
+        res.send(`Your account has been charged ${priced}`)
     }
 });
 });
