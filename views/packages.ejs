@@ -19,20 +19,34 @@ Design your own adventure with this exciting flight. In addition to the introduc
 </span>
 
 <li class="listed">
+
   <form class="" action="/pay" method="post">
            <div class="payPoint">
-45 Minute flight (Air Time) <span class="number"> $185.00</span>
+45 Minute flight (Air Time) <input class="number" type="number" name="option" value="185.00"/><input type="number" class="ghost"  name="option2" value="1">
+  <button type="submit">place order</button>
 </div>
 </form>
-</li><li class="listed">
-2 hour flight (Air Time) <span class="number"> $350.00</span>
+
+</li>
+
+<li class="listed">
+  <form class="" action="/pay" method="post">
+           <div class="payPoint">
+2 hour flight (Air Time)  <input class="number" readonly type="number" name="option" value="350.00"/><input type="number"  name="option2" value="1" class="ghost">
+  <button type="submit">place order</button>
+</div>
+</form>
 <span class="added">
 Best Value!
 </span>
 </li>
 ​<li class="listed">
-Cottage Country Tour - <span class="number" name="cottage">$300.00</span>
-
+  <form class="" action="/pay" method="post">
+           <div class="payPoint">
+Cottage Country Tour - <input class="number" type="number" name="option" value="300.00"/><input type="number" name="option2" value="1" class="ghost">
+<button type="submit">place order</button>
+</div>
+</form>
 Want to fly a plane over your cottage and wave to your family & guests? This one and a half hour intro to flight includes a pre-flight briefing, intro to the aircraft and one hour and thirty minute tour of Muskoka cottage country where you take control of the aircraft and complete your first flight. Included is an aerial picture of your cottage-Call for details
 
 </li>
@@ -80,11 +94,29 @@ Package Costs: Price is based on a per person basis.
 <span class="message">The Bride or Groom is always</span><strong class="message"> FREE!</strong>
 </p>
 <li class="listed">
-Minimum 3 people, plus bride or groom: <span class="number">$90.00 </span>per person
+Minimum 3 people, plus bride or groom:
+<form class="" action="/pay" method="post">
+         <div class="payPoint">
+<input class="number" type="number" name="option" value="90.00"/>$90.00 per person<input type="number" min="3" max="4" class="number" name="option2" value="3">
+<button type="submit">place order</button>
+</div>
+</form>
+
 </li><li class="listed">
-Minimum 5 people, plus bride or groom: <span class="number">$75.00</span> per person
+Minimum 5 people, plus bride or groom:
+<form class="" action="/pay" method="post">
+         <div class="payPoint">
+<input class="number" type="number" name="option" value="75.00"/>$75.00 per person<input type="number" min="5" max="6" class="number" name="option2" value="5">
+<button type="submit">place order</button>
+</div>
+</form>
 </li><li class="listed">
-Minimum 7 people, plus bride or groom: <span class="number">$60.00</span> per person
+  <form class="" action="/pay" method="post">
+           <div class="payPoint">
+Minimum 7 people, plus bride or groom: <input class="number" type="number"  name="option" value="60.00"/>$60.00 per person<input type="number" min="7" max="100" class="number" name="option2" value="7">
+<button type="submit">place order</button>
+</div>
+</form>
 </ul>
 </div>
 <div class="footer-container">

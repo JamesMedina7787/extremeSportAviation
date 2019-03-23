@@ -228,13 +228,15 @@ paypal.configure({
 app.post("/pay", (req,res)=>{
 
   var price =  req.body.option
+  var quantity = req.body.option2
+  var total = price * quantity
   const create_payment_json = {
     "intent": "sale",
     "payer": {
         "payment_method": "paypal"
     },
     "redirect_urls": {
-        "return_url": `http://localhost:3000/success/${price}`, //
+        "return_url": `http://localhost:3000/success/${total}`, //
         "cancel_url": "http://localhost:3000/cancel"
     },
     "transactions": [{
@@ -244,14 +246,14 @@ app.post("/pay", (req,res)=>{
                 "name": "one flight",
                 //product number i guess
                 "sku": "001",
-                "price": price,
+                "price": total,
                 "currency": "USD",
                 "quantity": 1
             }]
         },
         "amount": {
             "currency": "USD",
-            "total": price
+            "total": total
         },
         "description": "This is the payment description."
     }]
@@ -269,7 +271,7 @@ paypal.payment.create(create_payment_json, function (error, payment) {
     }
 });
 })
-var route = '/[-\d\.]+/'
+var route = '/[\d\.]+/'
 //payroute end here
 app.get('/success/:route', (req, res)=>{
   const payerId = req.query.PayerID
