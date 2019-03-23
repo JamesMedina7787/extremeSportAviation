@@ -207,6 +207,7 @@ app.get("/local-attractions", (req, res)=>{
   res.render('local-attractions')
 })
 app.get("/rates", (req, res)=>{
+  console.log(req.body.ten)
   res.render('rates')
 })
 app.get("/gallery", (req, res)=>{

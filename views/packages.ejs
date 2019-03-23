@@ -10,16 +10,7 @@
 <%- include partials/_menu %>
     <div class="site-container">
 <h1 class="page-heading">Packages</h1>
-<form class="" action="/pay" method="post">
 
-  <label>Quantity:</label>
-  <select class="" name="option">
-    <option value="1.00">1.00</option>
-    <option value="2.00">2.00</option>
-  </select>
-<button type="submit">place order</button>
-
-</form>
       <div class="child-container">
 
 <ul class="message">
@@ -28,8 +19,11 @@ Design your own adventure with this exciting flight. In addition to the introduc
 </span>
 
 <li class="listed">
-
+  <form class="" action="/pay" method="post">
+           <div class="payPoint">
 45 Minute flight (Air Time) <span class="number"> $185.00</span>
+</div>
+</form>
 </li><li class="listed">
 2 hour flight (Air Time) <span class="number"> $350.00</span>
 <span class="added">
