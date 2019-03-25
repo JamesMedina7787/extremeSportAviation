@@ -11,8 +11,30 @@ h3{
 h4{
   font-size: 1.15rem;
 }
-.ghost{
-  display:none
+input.ghost{
+  display:none;
+}
+div.payPoint{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.payPoint input{
+  flex:0 0 30%;
+  width: 19%;
+
+}
+.payPoint span{
+  flex:1 1 30%;
+   font-size: 15px;
+   font-family: cornerstone;
+   text-align: left;
+   font-family: denmark, ;
+   color: yellow;
+}
+
+button.payPoint{
+
 }
 
 .vertGallery{

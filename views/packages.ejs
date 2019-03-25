@@ -22,7 +22,7 @@ Design your own adventure with this exciting flight. In addition to the introduc
 
   <form class="" action="/pay" method="post">
            <div class="payPoint">
-45 Minute flight (Air Time) <input class="number" type="number" name="option" value="185.00"/><input type="number" class="ghost"  name="option2" value="1">
+<strong>45 Minute flight (Air Time) - </strong><input type="number" readonly name="option" value="185.00"/><input type="number" class="ghost"  name="option2" value="1">
   <button type="submit">place order</button>
 </div>
 </form>
@@ -32,18 +32,18 @@ Design your own adventure with this exciting flight. In addition to the introduc
 <li class="listed">
   <form class="" action="/pay" method="post">
            <div class="payPoint">
-2 hour flight (Air Time)  <input class="number" readonly type="number" name="option" value="350.00"/><input type="number"  name="option2" value="1" class="ghost">
+<strong>2 hour flight (Air Time)</strong><input readonly type="number" name="option" value="350.00"/><input type="number"  name="option2" value="1" class="ghost">
   <button type="submit">place order</button>
 </div>
-</form>
 <span class="added">
 Best Value!
 </span>
+</form>
 </li>
 ​<li class="listed">
   <form class="" action="/pay" method="post">
            <div class="payPoint">
-Cottage Country Tour - <input class="number" type="number" name="option" value="300.00"/><input type="number" name="option2" value="1" class="ghost">
+<strong>Cottage Country Tour - </strong><input type="number" readonly name="option" value="300.00"/><input type="number" name="option2" value="1" class="ghost">
 <button type="submit">place order</button>
 </div>
 </form>
@@ -94,26 +94,31 @@ Package Costs: Price is based on a per person basis.
 <span class="message">The Bride or Groom is always</span><strong class="message"> FREE!</strong>
 </p>
 <li class="listed">
-Minimum 3 people, plus bride or groom:
+
 <form class="" action="/pay" method="post">
          <div class="payPoint">
-<input class="number" type="number" name="option" value="90.00"/>$90.00 per person<input type="number" min="3" max="4" class="number" name="option2" value="3">
+           <strong>Minimum 3 people, plus bride or groom:</strong>
+<input  type="number" name="option" value="90.00" readonly/>$90.00 per person<input type="number" min="3" max="4"  name="option2" value="3">
 <button type="submit">place order</button>
 </div>
 </form>
 
 </li><li class="listed">
-Minimum 5 people, plus bride or groom:
+
 <form class="" action="/pay" method="post">
+
          <div class="payPoint">
-<input class="number" type="number" name="option" value="75.00"/>$75.00 per person<input type="number" min="5" max="6" class="number" name="option2" value="5">
+
+<input  type="number" name="option" value="75.00" readonly/>$75.00 per person<input type="number" min="5" max="6"  name="option2" value="5">
+
 <button type="submit">place order</button>
 </div>
 </form>
 </li><li class="listed">
   <form class="" action="/pay" method="post">
            <div class="payPoint">
-Minimum 7 people, plus bride or groom: <input class="number" type="number"  name="option" value="60.00"/>$60.00 per person<input type="number" min="7" max="100" class="number" name="option2" value="7">
+<input readonly type="number"  name="option" value="60.00"/> $60.00 per person<input type="number" min="7" max="100"  name="option2" value="7"><strong>Minimum 7 people, plus bride or groom:</strong>
+
 <button type="submit">place order</button>
 </div>
 </form>
