@@ -220,8 +220,8 @@ app.get("/", (req,res)=>{
 paypal.configure({
   'mode': 'sandbox',
   'client_id':
-  'Aaf-XzeXw1WOLFJDf2nQ-GbpHtA5q3lFbuPgcCghaoK_XdJP96Sy5MXDFVvH1jtZghVCeSZFXMrGBNIx',
-  'client_secret':'EMw01cuDOGcQ4vK0Co2MQsRmjdUkRkTQST_5La-AzBVZBi13fj-M3hdIe3ShNPVjWKXPzlUhsWkwHwOA'
+  'AR8pw7JPA_Ywct07uTzyowHUG2l7_AuU-CZM4j_Ly6YzJwCxRCNIZcVZGwaS83UMAXjFhfOMO75_bAzd',
+  'client_secret':'EOwSpw_z2ZccEbKKGgVZpxZ8r8G5CFZvP73Kt-cgYu_lAFsUUCONAKLWQAkuOVV4EXi0NyK9TQkCH77r'
 })
 
 
