@@ -21,10 +21,12 @@ Design your own adventure with this exciting flight. In addition to the introduc
 <li class="listed">
 
   <form class="" action="/pay" method="post">
-           <div class="payPoint">
-<strong>45 Minute flight (Air Time) - </strong><input type="number" readonly name="option" value="185.00"/><input type="number" class="ghost"  name="option2" value="1">
-  <button type="submit">place order</button>
-</div>
+           <div class="payPoint"><br><br><br><br>
+<strong>45 Minute flight (Air Time) - </strong><span class="number">$185</span><input class="ghost" type="number" readonly name="option" value="185.00"/><input type="number" class="ghost"  name="option2" value="1">
+
+<button type="submit">place order</button><br><br><br></div>
+
+
 </form>
 
 </li>
@@ -32,9 +34,9 @@ Design your own adventure with this exciting flight. In addition to the introduc
 <li class="listed">
   <form class="" action="/pay" method="post">
            <div class="payPoint">
-<strong>2 hour flight (Air Time)</strong><input readonly type="number" name="option" value="350.00"/><input type="number"  name="option2" value="1" class="ghost">
-  <button type="submit">place order</button>
-</div>
+             <br><br><br><br>
+<strong>2 hour flight (Air Time)</strong><span class="number">$350</span><input class="ghost" readonly type="number" name="option" value="350.00"/><input type="number"  name="option2" value="1" class="ghost">
+  <button type="submit">place order</button><br><br>
 <span class="added">
 Best Value!
 </span>
@@ -42,9 +44,9 @@ Best Value!
 </li>
 ​<li class="listed">
   <form class="" action="/pay" method="post">
-           <div class="payPoint">
-<strong>Cottage Country Tour - </strong><input type="number" readonly name="option" value="300.00"/><input type="number" name="option2" value="1" class="ghost">
-<button type="submit">place order</button>
+           <div class="payPoint"><br><br><br>
+<strong>Cottage Country Tour - </strong><span class="number">$300</span><input class="ghost" type="number" readonly name="option" value="300.00"/><input type="number" name="option2" value="1" class="ghost">
+<button type="submit">place order</button><br><br><br>
 </div>
 </form>
 Want to fly a plane over your cottage and wave to your family & guests? This one and a half hour intro to flight includes a pre-flight briefing, intro to the aircraft and one hour and thirty minute tour of Muskoka cottage country where you take control of the aircraft and complete your first flight. Included is an aerial picture of your cottage-Call for details
@@ -97,9 +99,9 @@ Package Costs: Price is based on a per person basis.
 
 <form class="" action="/pay" method="post">
          <div class="payPoint">
-           <strong>Minimum 3 people, plus bride or groom:</strong>
-<input  type="number" name="option" value="90.00" readonly/>$90.00 per person<input type="number" min="3" max="4"  name="option2" value="3">
-<button type="submit">place order</button>
+         <strong class="message">Minimum 3 people, plus bride or groom:</strong><br>
+<input  type="number" name="option" class="ghost" value="90.00" readonly/><span class="number">$90.00 per person</span><input type="number" min="3" max="4"  name="option2" value="3">
+<button type="submit">place order</button><br><br><br>
 </div>
 </form>
 
@@ -107,19 +109,22 @@ Package Costs: Price is based on a per person basis.
 
 <form class="" action="/pay" method="post">
 
-         <div class="payPoint">
+         <div class="payPoint">    <strong class="message">Minimum 5 people, plus bride or groom:</strong>
 
-<input  type="number" name="option" value="75.00" readonly/>$75.00 per person<input type="number" min="5" max="6"  name="option2" value="5">
+<br>
+<input  type="number" name="option" class="ghost" value="75.00" readonly/><span class="number">$75.00 per person</span><input type="number" min="5" max="6"  name="option2" value="5">
 
-<button type="submit">place order</button>
+<button type="submit">place order</button><br><br><br>
 </div>
 </form>
 </li><li class="listed">
   <form class="" action="/pay" method="post">
-           <div class="payPoint">
-<input readonly type="number"  name="option" value="60.00"/> $60.00 per person<input type="number" min="7" max="100"  name="option2" value="7"><strong>Minimum 7 people, plus bride or groom:</strong>
 
-<button type="submit">place order</button>
+           <div class="payPoint">    <strong class="message">Minimum 7 people, plus bride or groom:</strong>
+<br>
+<input readonly type="number" class="ghost"  name="option" value="60.00"/><span class="number"> $60.00 per person</span><input type="number" min="7" max="100"  name="option2" value="7">
+
+<button type="submit">place order</button><br><br><br>
 </div>
 </form>
 </ul>
