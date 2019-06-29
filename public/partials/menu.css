@@ -75,18 +75,20 @@ button.payPoint{
   width:100%;
 }
 .circleImage:hover {
-box-shadow: 0 0 4px 20px; }
+  box-shadow: 0 0 4px 20px;
+ }
+
+
 .pictureContainer{
   display:flex;flex-direction:row;width:100%;
 }
-.circleImage:hover h2 {
-transform: scale(1);
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);}
 
 .circleImage span{
+  transform: scale(1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);}
 
 }
 
@@ -140,6 +142,17 @@ color:orange
 transform-origin: top;
 }
 
+#added2{
+  display:none;
+  animation: 200ms ease-in 1 normal running forwards dropDown;
+transform-origin: top;
+}
+
+#added3{
+  display:none;
+  animation: 200ms ease-in 1 normal running forwards dropDown;
+transform-origin: top;
+}
 .listed{
   font-weight: bold;
   color: #002080;
@@ -307,7 +320,9 @@ img.vertGallery{
     padding: 10px;
   }
 
-
+  #added{
+    display: none
+  }
 
   .added{
     color:#331e05;

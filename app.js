@@ -43,7 +43,7 @@ for(let x = 0;x < 30;x++){
         date: grr.list[x].dt_txt
 
       }
-
+console.log({weather})
       TenDayWeather.push(weather)
       weather = ''
     }
@@ -52,6 +52,7 @@ for(let x = 0;x < 30;x++){
 
       res.render('home', weather_data)
     }
+
   });
 
 })

@@ -44,22 +44,28 @@ Why XStream?
 <li class="listed-click">Gain experience on some of the most technologically advanced instruments in use today. Our planes feature dual Dynon Skyview Avionics systems (really cool digital gauges!).</li>
 <li class="listed-click">Unlike most flight schools we also provide a fixed price for each facet of your training so you know exactly what your costs will be. if you choose.</li>
 <li class="listed-click">Situated at Edenvale Aerodrome Hangar K5 & Huronia (Midland) airport the delays are minimum which means more flight time not ground time and your dollar goes further.</li>
-</div>
+
 <div class="added">
 
 
 <li>All our training is one on one which means you as a student can go at your own pace.</li>
 </div>
+</div>
 </ul>
 </div>
 <div class="child-container">
-<h2 class="power-point">Our Mission</h2>
-<p class="listed">To provide students with the skills and knowledge to be safe and effective pilots in a relaxed and fun environment using state of the art planes and technology.</p>
+<h2 class="list-heading-click" onclick="showListed2()">Our Mission</h2>
+ <div id="added2">
+   <p class="listed">To provide students with the skills and knowledge to be safe and effective pilots in a relaxed and fun environment using state of the art planes and technology.</p>
+ </div>
 </div>
 <div class="child-container">
-  <ul><h2 class="power-point">
+  <ul><h2 class="list-heading-click" onclick="showListed3()">
 Our Goals
 </h2>
+<div id="added3">
+
+
 <li class="listed">
 Provide students with all of the resources to complete their license ratings.
 </li><li class="listed">
@@ -68,7 +74,7 @@ Provide one on one instruction to help navigate through all of the facets of bei
 <li class="listed">
 Graduate safe pilots who we will be proud to share the skies with.
 </li>
-
+</div>
 
 </ul>
 
@@ -136,11 +142,11 @@ Graduate safe pilots who we will be proud to share the skies with.
 
 
 
-  <iframe class="serviceGallery"  style="max-width:700px"  width="347" height="200" src="https://www.youtube.com/embed/ko-oaWggq2c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe class=""  style="max-width:700px"  width="347" height="200" src="https://www.youtube.com/embed/ko-oaWggq2c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-      <iframe class="serviceGallery" style="max-width:700px"  width="347" height="200" src="https://www.youtube.com/embed/BxcQe9oTWVk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="" style="max-width:700px"  width="347" height="200" src="https://www.youtube.com/embed/BxcQe9oTWVk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-      <img class="serviceGallery" style="max-width:200px; margin:30px" src="./partials/pictures/goPro2.png" alt="goPro">
+      <img class="" style="max-width:200px; margin:30px" src="./partials/pictures/goPro2.png" alt="goPro">
 
 
 <a class="serviceGallery" href="https://www.youtube.com/channel/UC0DW1MUCIkwrAezvtX03Xig"> <img style="max-width:150px;margin:20px; width:35%; margin-right:40px" class="pictureImage" src="./partials/pictures/Click-Here-YouTube.jpg" alt="you tube"> </a>
@@ -194,7 +200,7 @@ Note* Your purchase is for time spent in the air (not wasted on the ground). Whe
 </div>
 <div class="child-container">
    <h3 class="list-heading">Weather For Edenvale, Ontario, Canada</h3> <br>
-  <% for(x = 0; x < 30; x=x+4){ %>
+  <% for(x = 0; x < 25; x=x+4){ %>
     <div class="gallery" style="color:#804000; font-family:bazooka">
 <div class="serviceGallery" style="color:#804000; font-family:cuckoo"><%=TenDayWeather[x].date %> </div>
 <div class="serviceGallery" style="color:#804000; font-family:market"><%=TenDayWeather[x].temperature %> degrees </div>
@@ -243,6 +249,24 @@ Note* Your purchase is for time spent in the air (not wasted on the ground). Whe
 
 var showListed = function(){
   var lisht = document.getElementById("added")
+   if(lisht){
+     console.log("yes")
+     lisht.style.display = "block"
+   }else{
+       console.log("no")
+   }
+}
+var showListed2 = function(){
+  var lisht = document.getElementById("added2")
+   if(lisht){
+     console.log("yes")
+     lisht.style.display = "block"
+   }else{
+       console.log("no")
+   }
+}
+var showListed3 = function(){
+  var lisht = document.getElementById("added3")
    if(lisht){
      console.log("yes")
      lisht.style.display = "block"
