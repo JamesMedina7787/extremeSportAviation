@@ -34,15 +34,17 @@
   XStream Sport Aviation
   </h1>
 
-<ul>  <span class="list-heading">
+<ul>  <span class="list-heading-click" onClick="showListed()">
 Why XStream?
 </span>
-<li class="listed">Our experienced Flight Instructors teach what you need to know in order to make you a safer, more professional pilot in the real world.</li>
-<li class="listed">You will train on the most modern & advanced Light Sport (AULA) Advanced Ultralight aircraft on the market, the Evektor Sportstar Max.</li>
-<li class="listed">You will experience amazing 360° views in a full bubble canopy low wing plane.</li>
-<li class="listed">Gain experience on some of the most technologically advanced instruments in use today. Our planes feature dual Dynon Skyview Avionics systems (really cool digital gauges!).</li>
-<li class="listed">Unlike most flight schools we also provide a fixed price for each facet of your training so you know exactly what your costs will be. if you choose.</li>
-<li class="listed">Situated at Edenvale Aerodrome Hangar K5 & Huronia (Midland) airport the delays are minimum which means more flight time not ground time and your dollar goes further.</li>
+<div id="added">
+<li class="listed-click">Our experienced Flight Instructors teach what you need to know in order to make you a safer, more professional pilot in the real world.</li>
+<li class="listed-click">You will train on the most modern & advanced Light Sport (AULA) Advanced Ultralight aircraft on the market, the Evektor Sportstar Max.</li>
+<li class="listed-click">You will experience amazing 360° views in a full bubble canopy low wing plane.</li>
+<li class="listed-click">Gain experience on some of the most technologically advanced instruments in use today. Our planes feature dual Dynon Skyview Avionics systems (really cool digital gauges!).</li>
+<li class="listed-click">Unlike most flight schools we also provide a fixed price for each facet of your training so you know exactly what your costs will be. if you choose.</li>
+<li class="listed-click">Situated at Edenvale Aerodrome Hangar K5 & Huronia (Midland) airport the delays are minimum which means more flight time not ground time and your dollar goes further.</li>
+</div>
 <div class="added">
 
 
@@ -237,6 +239,16 @@ Note* Your purchase is for time spent in the air (not wasted on the ground). Whe
   //   }
   //
   //   }
+}
+
+var showListed = function(){
+  var lisht = document.getElementById("added")
+   if(lisht){
+     console.log("yes")
+     lisht.style.display = "block"
+   }else{
+       console.log("no")
+   }
 }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBO_mb_RfGm_DbNLuMWYmhtxuAVjVQQ23w&callback=initMap"  async defer>

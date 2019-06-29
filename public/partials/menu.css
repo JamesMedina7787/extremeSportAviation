@@ -111,11 +111,41 @@ strong {
 color:#1d206d;
   text-shadow: .5;
 }
+
+.list-heading-click{
+text-align: center;
+display: block;
+font-size: 2em;
+background-color: orange
+}
+
+.list-heading-click:hover{
+text-align: center;
+display: block;
+font-size: 2em;
+background-color: blue;
+color:orange
+}
+
+.listed-click{
+  font-weight: bold;
+  color: #002080;
+  font-size: 1.5em;
+}
+
+
+#added{
+  display:none;
+  animation: 200ms ease-in 1 normal running forwards dropDown;
+transform-origin: top;
+}
+
 .listed{
   font-weight: bold;
   color: #002080;
   font-size: 1.5em
 }
+
 .power-point{
   flex-basis: 100%;
   color: #802000;
@@ -276,6 +306,9 @@ img.vertGallery{
     margin: 0 auto;
     padding: 10px;
   }
+
+
+
   .added{
     color:#331e05;
     font-family: technical;
@@ -348,6 +381,15 @@ img.vertGallery{
       margin: 0 auto;
       padding: 10px;
     }
+
+.serviceGallery:hover{
+
+    animation: 1000ms 1 normal running forwards spins;
+    transform-style: preserve-3d;
+    transform-origin: top;
+
+}
+
     .added{
       color:#331e05;
       font-family: technical;
@@ -403,4 +445,70 @@ img.vertGallery{
       margin: 0 auto;
     }
 /* mainMenu */
+  }
+
+
+  @keyframes fadeIn {
+    0%{
+      opacity: 0
+    }
+    100%{
+      opacity:1
+    }
+
+  }
+
+  @keyframes fadeOut {
+    0%{
+      opacity: 1
+    }
+    100%{
+      opacity:0
+    }
+
+  }
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spins {
+    from {
+      transform: rotateY(0);
+    }
+    to {
+      transform: rotateY(180deg);
+    }
+  }
+
+  @keyframes grows{
+    0%{
+      border: 0 solid purple
+    }
+    100%{
+      border: 22px solid purple
+    }
+  }
+
+  @keyframes spins90 {
+    from {
+      transform: rotateY(0);
+    }
+    to {
+      transform: rotateY(90deg);
+    }
+  }
+
+  @keyframes dropDown {
+    from {
+      transform: scaleY(0);
+    }
+    to {
+      transform: scaleY(1);
+    }
   }
