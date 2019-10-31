@@ -35,6 +35,6 @@
     "nodemailer": "^5.1.1",
     "paypal-rest-sdk": "^1.8.1",
     "request": "^2.88.0",
-    "sequelize": "^4.42.0"
+    "sequelize": "^5.15.1"
   }
 }
